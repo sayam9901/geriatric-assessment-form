@@ -1,5 +1,5 @@
 {
-  "name": "mantine-vite-template",
+  "name": "geriatric-assessment-form",
   "version": "0.0.0",
   "private": true,
   "type": "module",
@@ -10,7 +10,7 @@
     "typecheck": "tsc --noEmit",
     "lint": "npm run oxlint && npm run stylelint",
     "oxlint": "oxlint -c oxlint.config.mjs .",
-    "stylelint": "stylelint '**/*.css' --cache",
+    "stylelint": "stylelint '**/*.css' --cache --allow-empty-input",
     "format:test": "oxfmt -c oxfmt.config.mjs --check \"**/*.{ts,tsx}\"",
     "format:write": "oxfmt -c oxfmt.config.mjs --write \"**/*.{ts,tsx}\"",
     "vitest": "vitest run",
@@ -21,10 +21,13 @@
   },
   "dependencies": {
     "@mantine/core": "9.5.2",
+    "@mantine/dates": "^9.5.2",
+    "@mantine/form": "^9.5.2",
     "@mantine/hooks": "9.5.2",
+    "dayjs": "^1.11.23",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
-    "react-router-dom": "^7.9.4"
+    "zod": "^4.5.4"
   },
   "devDependencies": {
     "@storybook/addon-themes": "^10.0.0",
